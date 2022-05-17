@@ -1,6 +1,7 @@
-#!bin/sh
+#!bin/bash
 
 # Run scrips after mount partitions...
+# Install git and curl
 
 mkdir /etc/pacman.d/bk
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/bk
@@ -8,7 +9,7 @@ touch /etc/pacman.d/mirrorlist
 echo "Server = https://mirror.arvancloud.com/archlinux/$repo/os/$arch" >> /etc/pacman.d/mirrorlist
 pacman -Syy
 
-pacstrap /mnt base base-devel linux linux-firmware vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g dialog wpa_supplicant mtools dosfstools reflector xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups avahi
+pacman -S base base-devel linux linux-firmware vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g dialog wpa_supplicant mtools dosfstools reflector xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups avahi
 
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt

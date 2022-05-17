@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl

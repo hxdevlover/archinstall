@@ -1,6 +1,6 @@
 #!bin/bash
 
-# Run scrips after mount partitions...
+# Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
 mkdir /etc/pacman.d/bk

@@ -35,6 +35,7 @@ systemctl enable bluetooth
 systemctl enable cups.service
 systemctl enable sshd
 systemctl enable reflector.timer
+systemctl enable avahi-daemon
 
 useradd -m hx
 echo hx:password | chpasswd

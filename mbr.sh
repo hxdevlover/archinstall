@@ -42,6 +42,3 @@ echo hx:password | chpasswd
 usermod -aG wheel hx
 sed -i '82s/.//' /etc/sudoers
 
-
-exit
-umount -R /mnt

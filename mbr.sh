@@ -40,7 +40,7 @@ systemctl enable avahi-daemon
 useradd -m hx
 echo hx:password | chpasswd
 usermod -aG wheel hx
-echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
+sed -i '82s/.//' /etc/sudoers
 
 
 exit

@@ -10,7 +10,7 @@ Install Base system:
 
 4. mount /dev/[ROOT] /mnt - swapon /dev/[SWAP]
 
-5. pacstrap /mnt base base-devel linux linux-firmware vim nano vi
+5. pacstrap /mnt base base-devel linux linux-firmware vim nano vi git curl
 
 6. genfstab /mnt >> /mnt/etc/fstab
 

@@ -11,6 +11,9 @@ pacman -Sy xorg sddm plasma firefox papirus-icon-theme dolphin-plugins kde-syste
 # If you use Intel, Install these packages too:
 # pacman -S xf86-video-intel intel-ucode
 
+# If you use AMD, Install these packages too:
+# pacman -S xf86-video-amdgpu
+
 sudo systemctl enable dbus
 sudo systemctl enable sddm
 

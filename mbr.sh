@@ -3,7 +3,7 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-pacman -S vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g dialog wpa_supplicant mtools dosfstools reflector xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups avahi
+pacman -S grub networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools reflector base-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip alsa-utils pulseaudio bash-completion openssh rsync acpi acpi_call virt-manager qemu qemu-arch-extra edk2-ovmf bridge-utils dnsmasq vde2 openbsd-netcat iptables-nft ipset firewalld flatpak sof-firmware nss-mdns acpid os-prober ntfs-3g terminus-font
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hxclocl --systohc
@@ -25,14 +25,15 @@ systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable cups.service
 systemctl enable sshd
-systemctl enable reflector.timer
 systemctl enable avahi-daemon
+systemctl enable reflector.timer
+systemctl enable fstrim.timer
+systemctl enable libvirtd
+systemctl enable firewalld
+systemctl enable acpid
 
 useradd -m hx
 echo hx:password | chpasswd
 usermod -aG wheel hx
 sed -i '82s/.//' /etc/sudoers
 
-exit
-umount -a
-reboot

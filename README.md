@@ -1,4 +1,4 @@
-# hxarchinstallscript
+# arch install script
 
 A shell script to make installing arch easier.
 

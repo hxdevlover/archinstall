@@ -20,7 +20,7 @@ sed -i '178s/.//' /etc/locale.gen
 sed -i '234s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-echo "KEYMAP=de_CH-latin1" >> /etc/vconsole.conf
+echo "KEYMAP=us" >> /etc/vconsole.conf
 echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts

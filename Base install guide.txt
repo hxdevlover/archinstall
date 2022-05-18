@@ -1,0 +1,17 @@
+Install Base system:
+
+1. Connect to internet with Wi-Fi (iwctl) or Ethernet (recommended).
+
+2. Partition your disk:
+  a. lsblk
+  b. cfdisk (or fdisk)
+
+3. mkfs.ext4 /dev/... - mkfs.fat -F 32 /dev/... - mkswap /dev/[SWAP]
+
+4. mount /dev/[ROOT] /mnt - swapon /dev/[SWAP]
+
+5. pacstrap /mnt base base-devel linux linux-firmware vim nano vi
+
+6. genfstab /mnt >> /mnt/etc/fstab
+
+7. arch-chroot /mnt

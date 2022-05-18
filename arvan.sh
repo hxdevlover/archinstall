@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 mkdir /etc/pacman.d/bak
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/bak

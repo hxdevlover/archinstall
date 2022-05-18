@@ -3,12 +3,6 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-mkdir /etc/pacman.d/bak
-mv /etc/pacman.d/mirrorlist /etc/pacman.d/bak
-touch /etc/pacman.d/mirrorlist
-echo "Server = https://mirror.arvancloud.com/archlinux/\$repo/os/\$arch" >> /etc/pacman.d/mirrorlist
-pacman -Syy
-
 pacman -S vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g dialog wpa_supplicant mtools dosfstools reflector xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups avahi
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime

@@ -3,7 +3,7 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-pacman -S vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g xdg-user-dirs xdg-utils
+pacman -S vim networkmanager network-manager-applet grub pulseaudio bash-completion openssh ntfs-3g xdg-user-dirs xdg-utils
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hxclocl --systohc

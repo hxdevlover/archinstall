@@ -42,4 +42,6 @@ echo hx:password | chpasswd
 usermod -aG wheel hx
 sed -i '82s/.//' /etc/sudoers
 
-printf "\e[1;32mDone! Type exit, umount -a and reboot.\e[0m"
+exit
+umount -a
+reboot

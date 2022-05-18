@@ -6,7 +6,7 @@ sudo hwclock --systohc
 pacman -Sy xorg sddm plasma firefox papirus-icon-theme dolphin-plugins kde-system-meta ark kate kcalc kfind konsole unzip p7zip gwenview okular archlinux-wallpaper dbus tilix plasma-session-wayland vlc openvpn
 
 # If you use Nvidia, Install these packages too:
-# pacman -S xf86-video-nouveau nvidia nvidia-settings
+# pacman -S xf86-video-nouveau nvidia nvidia-utils nvidia-settings
 
 # If you use Intel, Install these packages too:
 # pacman -S xf86-video-intel intel-ucode

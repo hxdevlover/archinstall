@@ -11,9 +11,6 @@ pacman -Syy
 
 pacman -S vim networkmanager network-manager-applet linux-headers grub pulseaudio bash-completion openssh ntfs-3g dialog wpa_supplicant mtools dosfstools reflector xdg-user-dirs xdg-utils gvfs gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups avahi
 
-genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
-
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hxclocl --systohc
 sed -i '178s/.//' /etc/locale.gen

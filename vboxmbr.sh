@@ -3,7 +3,7 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-pacman -Sy grub networkmanager network-manager-applet dialog mtools dosfstools reflector os-proper xdg-user-dirs xdg-utils virtualbox-guest-utils
+pacman -Sy grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g virtualbox-guest-utils
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hxclocl --systohc
@@ -25,11 +25,7 @@ systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable cups.service
 systemctl enable sshd
-systemctl enable avahi-daemon
 systemctl enable reflector.timer
-systemctl enable fstrim.timer
-systemctl enable libvirtd
-systemctl enable firewalld
 systemctl enable acpid
 
 useradd -m hx

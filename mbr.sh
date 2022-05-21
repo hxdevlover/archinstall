@@ -3,7 +3,7 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-pacman -S grub networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g
+pacman -Sy grub networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hwclocl --systohc
@@ -16,7 +16,7 @@ echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
-echo root:password | chpasswd
+echo root:1234 | chpasswd
 
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -28,8 +28,8 @@ systemctl enable sshd
 systemctl enable reflector.timer
 systemctl enable acpid
 
-useradd -m hx
-echo hx:password | chpasswd
-usermod -aG wheel hx
+useradd -m [USER]
+echo [USER]:1234 | chpasswd
+usermod -aG wheel [USER]
 sed -i '82s/.//' /etc/sudoers
 

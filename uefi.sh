@@ -16,7 +16,7 @@ echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
-echo root:password | chpasswd
+echo root:1234 | chpasswd
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -28,7 +28,7 @@ systemctl enable sshd
 systemctl enable reflector.timer
 systemctl enable acpid
 
-useradd -m hx
-echo hx:password | chpasswd
-usermod -aG wheel hx
+useradd -m [USER]
+echo [USER]:1234 | chpasswd
+usermod -aG wheel [USER]
 sed -i '82s/.//' /etc/sudoers

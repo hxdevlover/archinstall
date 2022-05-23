@@ -3,7 +3,7 @@
 # Run scrips after mount partitions and make sure you installed base, base-devel, linux and linux-firmware packages to /mnt...
 # Install git and curl
 
-pacman -Sy grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g
+pacman -Sy --noconfirm grub efibootmgr networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hwclocl --systohc

@@ -6,7 +6,7 @@ sudo pacman -Sy --noconfirm --needed xorg arandr xorg-xrandr lightdm lightdm-gtk
 cd ~/.config/
 git clone https://git.suckless.org/dwm
 cd dwm
-sudo make clean istall
+sudo make clean install
 
 cd ~/.config/
 git clone https://git.suckless.org/dmenu

@@ -20,17 +20,17 @@ sudo make clean install
 
 #--------------------------------
 
-#sudo touch /usr/share/xsessions/dwm.desktop
+sudo touch /usr/share/xsessions/dwm.desktop
 
-#sudo tee -a /usr/share/xsessions/dwm.desktop <<EOF
-#[Desktop Entry]
-#Encoding=UTF-8
-#Name=dwm
-#Comment=Dynamic window manager
-#Exec=dwm
-#Icon=dwm
-#Type=XSession
-#EOF
+sudo tee -a /usr/share/xsessions/dwm.desktop <<EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic window manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+EOF
 
 #--------------------------------
 

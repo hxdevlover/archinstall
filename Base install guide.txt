@@ -12,6 +12,6 @@ Install Base system:
 
 5. pacstrap /mnt base base-devel linux linux-firmware linux-headers vim nano vi git curl
 
-6. genfstab /mnt >> /mnt/etc/fstab
+6. genfstab -U /mnt >> /mnt/etc/fstab
 
 7. arch-chroot /mnt

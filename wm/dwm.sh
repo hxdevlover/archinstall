@@ -1,7 +1,7 @@
 #! /bin/bash
 # Install yay with yay.sh file that you downloaded from repository.
 
-sudo pacman -Sy --noconfirm --needed xorg arandr xorg-xrandr lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings nitrogen picom alacritty ttf-hack
+sudo pacman -Sy --noconfirm --needed xorg arandr xorg-xrandr lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings nitrogen picom alacritty ttf-hack noto-fonts otf-font-awesome
 
 cd ~/.config/
 git clone https://git.suckless.org/dwm

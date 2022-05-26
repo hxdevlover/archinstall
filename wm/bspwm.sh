@@ -186,6 +186,8 @@ cd ~/
 
 yay -S polybar
 
+sudo cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar
+
 tee -a ~/config/polybar/launch.sh <<EOF
 #!/bin/bash
 

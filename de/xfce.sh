@@ -3,7 +3,7 @@
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 
-sudo pacman -S --noconfirm xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xfce4 xfce4-goodies firefox arc-gtk-theme arc-icon-theme papirus-icon-theme vlc unzip p7zip archlinux-wallpaper 
+sudo pacman -S --noconfirm xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xfce4 xfce4-goodies firefox arc-gtk-theme arc-icon-theme papirus-icon-theme vlc unzip p7zip archlinux-wallpaper alacritty kitty fish
 
 # If you use Nvidia, Install these packages too:
 # pacman -S xf86-video-nouveau nvidia nvidia-utils nvidia-settings

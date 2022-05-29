@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xfce4 xfce4-goodies firefox papirus-icon-theme materia-gtk-theme vlc unzip p7zip pcmanfm archlinux-wallpaper alacritty fish xterm
+sudo pacman -S --noconfirm --needed xorg lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xmonad xmonad-contrib xfce4 xfce4-goodies firefox papirus-icon-theme materia-gtk-theme vlc unzip p7zip pcmanfm archlinux-wallpaper alacritty fish xterm
 
 sudo pacman -R thunar thunar-volman xfdesktop xfce4-terminal
 

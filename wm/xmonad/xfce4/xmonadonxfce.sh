@@ -7,6 +7,7 @@ sudo touch $HOME/.xprofile
 sudo tee -a $HOME/.xprofile <<EOF
 nitrogen --restore &
 xmonad --replace &
+pulseaudio --start &
 EOF
 
 sudo systemctl enable lightdm

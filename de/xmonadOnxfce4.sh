@@ -4,13 +4,6 @@ sudo pacman -S --noconfirm --needed xorg lightdm lightdm-gtk-greeter lightdm-gtk
 
 sudo pacman -R thunar thunar-volman xfdesktop xfce4-terminal
 
-sudo touch $HOME/.xprofile
-sudo tee -a $HOME/.xprofile <<EOF
-nitrogen --restore &
-xmonad --replace &
-pulseaudio --start &
-EOF
-
 sudo mkdir $HOME/.xmonad
 sudo cp -r $HOME/archinstall/wm/xmonad/xfce4/xmonad.hs $HOME/.xmonad
 

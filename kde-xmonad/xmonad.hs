@@ -207,7 +207,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- which denotes layout choice.
 --
 
-myLayout = avoidStruts(tiled ||| Mirror tiled ||| Full ||| simpleFloat)
+myLayout = avoidStruts(tiled ||| Full ||| simpleFloat)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -241,6 +241,7 @@ myManageHook = composeAll . concat $
     , [ title       =? t --> doFloat           | t <- myOtherFloats]
     , [ className   =? c --> doF (W.shift "2") | c <- webApps]
     , [ className   =? c --> doF (W.shift "3") | c <- ircApps]
+    , [ className   =? "plasmashell" --> doFloat ]
     ]
   where myFloats      = ["MPlayer", "Gimp"]
         myOtherFloats = ["alsamixer"]

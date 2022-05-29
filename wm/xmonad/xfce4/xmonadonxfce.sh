@@ -7,6 +7,6 @@ sudo touch .xprofile
 sudo tee -a .xprofile <<EOF
 nitrogen --restore &
 xmonad --replace &
-
+EOF
 
 sudo systemctl enable lightdm

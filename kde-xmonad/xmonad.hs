@@ -66,7 +66,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#393E46"
-myFocusedBorderColor = "#CA82FF"
+myFocusedBorderColor = "#B088F9"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -76,13 +76,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm,               xK_Return), spawn "alacritty" )
 
-    -- launch dmenu
+    -- launch xfce4-appfinder
     , ((modm,               xK_a     ), spawn "xfce4-appfinder")
 
-    , ((modm,               xK_d     ), spawn "dmenu_run")
-
     -- launch PCManFM
-    , ((modm .|. shiftMask, xK_Return), spawn "pcmanfm")
+    , ((modm .|. shiftMask, xK_Return), spawn "thunar")
 
     -- launch firefox
     , ((modm .|. shiftMask, xK_f     ), spawn "firefox")
@@ -246,12 +244,17 @@ myManageHook = composeAll . concat $
     , [ className   =? c --> doFloat           | c <- webApps]
     , [ className   =? c --> doFloat           | c <- ircApps]
     , [ className   =? "plasmashell" --> doIgnore >> doFloat ]
-    , [ title       =? "xfce4-appfinder" --> doFloat ]
-    , [ title       =? "bleachbit" --> doFloat ]
+    , [ title       =? "bleachbit" --> doCenterFloat ]
+    , [ title       =? "xfce4-appfinder" --> doCenterFloat ]
     , [ className   =? "Plasma-desktop" --> doFloat ]
     , [ className   =? "krunner" --> doIgnore >> doFloat ]
+    , [ className   =? "kcalc" --> doCenterFloat ]
+    , [ className   =? "TelegramDesktop" --> doCenterFloat ]
     , [ className   =? "Klipper" --> doFloat ]
     , [ className   =? "Keepassx" --> doFloat ]
+    , [ title       =? "Oracle VM VirtualBox Manager" --> doFloat ]
+    , [ title       =? "VirtualBox Machine" --> doFloat ]
+    , [ isFullscreen -->  doFullFloat ]  
     ]
   where myFloats      = ["MPlayer", "Gimp"]
         myOtherFloats = ["alsamixer"]
@@ -287,18 +290,6 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "killall firefox"
-    spawn "killall okular"   
-    spawn "killall Telegram" 
-
-    spawnOnce "lxsession"
-    --spawnOnce "picom -f &"
-    spawnOnce "nm-applet"
-    --spawnOnce "volumeicon"
-    spawn "pulseaudio --start &"
-    --spawn ("sleep 2 && trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --height 22")
-    --spawnOnce "nitrogen --restore &"
-    --spawn ("sleep 2 && conky -c $HOME/.config/conky/xmonad/" ++ colorScheme ++ "-01.conkyrc")
     setWMName "LG3D"
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

@@ -253,6 +253,7 @@ myManageHook = composeAll
     , className =? "Xfce4-settings-manager" --> doIgnore >> doCenterFloat
     , className =? "Xfce4-clipman"         --> doCenterFloat
     , className =? "Xfce4-appfinder" --> doCenterFloat
+    , className =? "Xfce4-popup-whiskermenu" --> doIgnore >> doFloat
     , className =? "Xfce4-panel"     --> doIgnore >> doCenterFloat
     , className =? "lightdm-gtk-greeter-settings" --> doIgnore >> doCenterFloat
     , title =? "Oracle VM VirtualBox Manager"  --> doFloat

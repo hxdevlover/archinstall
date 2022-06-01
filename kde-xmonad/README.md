@@ -1,6 +1,6 @@
 1. Install KDE and Xmonad by running kde-xmonad.sh
 
-2. Copy [ picom.conf ] to [ /etc/xdg/ ] and from system settings add picom to autostart
+2. Copy [ picom.conf ] to [ /etc/xdg/ ] and from system settings add picom to autostart -- run picom with [ picom --experimental-backend ] command.
 
 3. In [ $HOME/ ] make a directory and name it [ .xmonad ] -- Copy xmonad.hs there and run [ xmonad --recompile ]
 

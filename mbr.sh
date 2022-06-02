@@ -6,7 +6,7 @@
 pacman -Sy --noconfirm grub networkmanager network-manager-applet dialog mtools dosfstools xdg-user-dirs xdg-utils nfs-utils inetutils dnsutils bluez bluez-utils cups pulseaudio bash-completion openssh reflector acpi acpi_call acpid ipset os-prober ntfs-3g
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
-hwclocl --systohc
+hwclock --systohc
 sed -i '178s/.//' /etc/locale.gen
 sed -i '234s/.//' /etc/locale.gen
 locale-gen

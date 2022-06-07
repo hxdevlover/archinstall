@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Sy --noconfirm xorg sddm plasma firefox papirus-icon-theme dolphin-plugins kde-system-meta ark kate kcalc kfind konsole unzip p7zip gwenview okular archlinux-wallpaper dbus plasma-wayland-session vlc openvpn spectacle kwallet kwalletmanager alacritty fish
+sudo pacman -Sy --noconfirm xorg sddm plasma firefox papirus-icon-theme dolphin-plugins kde-system-meta ark kate kcalc krunner kfind konsole unrar unzip p7zip gwenview okular archlinux-wallpaper dbus plasma-wayland-session vlc openvpn spectacle kwallet kwalletmanager alacritty fish
 
 # If you use Nvidia, Install these packages too:
 # sudo pacman -S xf86-video-nouveau nvidia nvidia-utils nvidia-settings

@@ -226,35 +226,35 @@ draw_bold_text_with_bright_colors: true
 #######################################
 schemes:
 
-### Monokai Pro ###
+  ### Monokai Pro ###
   MonokaiPro: &MonokaiPro
   # Default colors
-  primary:
-    background: '0x2D2A2E'
-    foreground: '0xfff1f3'
+    primary:
+      background: '#2D2A2E'
+      foreground: '#fff1f3'
 
   # Normal colors
-  normal:
-    black:   '0x2c2525'
-    red:     '0xfd6883'
-    green:   '0xadda78'
-    yellow:  '0xf9cc6c'
-    blue:    '0xf38d70'
-    magenta: '0xa8a9eb'
-    cyan:    '0x85dacc'
-    white:   '0xfff1f3'
+    normal:
+      black:   '#2c2525'
+      red:     '#fd6883'
+      green:   '#adda78'
+      yellow:  '#f9cc6c'
+      blue:    '#f38d70'
+      magenta: '#a8a9eb'
+      cyan:    '#85dacc'
+      white:   '#fff1f3'
 
   # Bright colors
-  bright:
-    black:   '0x72696a'
-    red:     '0xfd6883'
-    green:   '0xadda78'
-    yellow:  '0xf9cc6c'
-    blue:    '0xf38d70'
-    magenta: '0xa8a9eb'
-    cyan:    '0x85dacc'
-    white:   '0xfff1f3'
-    
+    bright:
+      black:   '#72696a'
+      red:     '#fd6883'
+      green:   '#adda78'
+      yellow:  '#f9cc6c'
+      blue:    '#f38d70'
+      magenta: '#a8a9eb'
+      cyan:    '#85dacc'
+      white:   '#fff1f3'
+
   ### Doom One ###
   DoomOne: &DoomOne
     primary:

@@ -31,5 +31,5 @@ systemctl enable acpid
 useradd -m [USER]
 echo [USER]:1234 | chpasswd
 usermod -aG wheel [USER]
-sed -i '82s/.//' /etc/sudoers
+sed -i '85s/.//' /etc/sudoers
 

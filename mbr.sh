@@ -7,8 +7,8 @@ pacman -Sy --noconfirm grub networkmanager network-manager-applet dialog mtools 
 
 ln -sf /usr/share/zoneinfo/Asia/Tehran /etc/localtime
 hwclock --systohc
-sed -i '178s/.//' /etc/locale.gen
-sed -i '234s/.//' /etc/locale.gen
+sed -i '177s/.//' /etc/locale.gen
+sed -i '233s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 echo "KEYMAP=us" >> /etc/vconsole.conf

@@ -29,7 +29,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "alacritty"
+myTerminal      = "kitty"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -60,7 +60,7 @@ altMask         = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+myWorkspaces    = ["1","2","3","4","5"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -76,22 +76,19 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_a     ), spawn "xfce4-appfinder")
+    , ((modm,               xK_a     ), spawn "rofi -show drun")
 
     -- launch PCManFM
-    , ((modm .|. shiftMask, xK_Return), spawn "thunar")
+    , ((modm .|. shiftMask, xK_Return), spawn "pcmanfm")
 
     -- launch firefox
-    , ((modm .|. shiftMask, xK_f     ), spawn "firefox")
+    , ((modm .|. shiftMask, xK_f     ), spawn "qute-browser")
+
+    -- launch Emacs
+    , ((modm,               xK_e     ), spawn "/usr/bin/emacsclient -c -a 'emacs'")
 
     -- close focused window
-    , ((modm,               xK_q     ), kill)
-
-    -- xmonad shell prompt
-    --, ((modm .|. controlMask, xK_x), shellPrompt def)
-
-    -- xmonad prompt
-    , ((modm .|. altMask, xK_x), xmonadPrompt def)
+    , ((modm .|. shiftMask, xK_q     ), kill)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)

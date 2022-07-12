@@ -1,7 +1,0 @@
-1. remove all keyboard shortcuts form xfce keyboard settings.
-
-2. remove all icons from desktop from desktop settings.
-
-3. add [ xmonad --replace ] in startup settings
-
-4. Uninstall xfdesktop xfwm4
